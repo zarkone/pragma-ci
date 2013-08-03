@@ -1,0 +1,4 @@
+{
+	"checkInterval":5000,
+	"buildRootDirectory": "./builds"
+}

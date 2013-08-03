@@ -1,0 +1,11 @@
+{
+	"name":"Project Name",
+	"git":"https://github.com/account/project-name.git",
+	"branch":"master",
+	"triggerKey":"trigger-key",
+	"preDeploymentScript":"preDeploy.js",
+	"postDeploymentScript":"postDeploy.js",
+	"deploymentPath":"/srv/deployment",
+	"deploymentRoot":".",
+	"timeout":30000
+}
