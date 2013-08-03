@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63ec8e3e-e24b-4c41-8598-14fac81c4c93" name="Default" comment="" />
+    <list default="true" id="63ec8e3e-e24b-4c41-8598-14fac81c4c93" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="pragma-ci.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/BuildServer.js" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375279715535" ignored="false" />
@@ -20,7 +24,7 @@
     <file path="/README.md" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375553344226" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-logger/example/main.js" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375362435141" ignored="false" />
     <file path="/main.js" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375367140987" ignored="false" />
-    <file path="/Dummy.txt" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375538779691" ignored="false" />
+    <file path="/Dummy.txt" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375553954186" ignored="false" />
     <file path="/a.dummy" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375450921991" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-config/LICENCE.md" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375288844358" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-config/package.json" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375361276435" ignored="false" />
@@ -85,20 +89,7 @@
         <entry file="file://$PROJECT_DIR$/services/BuildManager.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="241" column="17" selection-start="6338" selection-end="6338" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc;n#BuildManager#0" expanded="true" />
-                <element signature="e#2064#2154#0" expanded="true" />
-                <element signature="e#2195#2266#0" expanded="true" />
-                <element signature="e#2307#2384#0" expanded="true" />
-                <element signature="e#2435#2512#0" expanded="true" />
-                <element signature="e#2563#2642#0" expanded="true" />
-                <element signature="e#2695#2742#0" expanded="true" />
-                <element signature="e#3362#3562#0" expanded="true" />
-                <element signature="e#4017#4177#0" expanded="true" />
-                <element signature="e#5199#5347#0" expanded="true" />
-                <element signature="e#5828#5924#0" expanded="true" />
-                <element signature="e#6436#6569#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,19 +98,7 @@
         <entry file="file://$PROJECT_DIR$/services/TaskRunner.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="144" column="12" selection-start="4152" selection-end="4152" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#!!doc;n#TaskRunner#0" expanded="true" />
-                <element signature="e#2140#2229#0" expanded="true" />
-                <element signature="e#2268#2339#0" expanded="true" />
-                <element signature="e#2378#2459#0" expanded="true" />
-                <element signature="e#2504#2616#0" expanded="true" />
-                <element signature="e#2670#2738#0" expanded="true" />
-                <element signature="e#2782#2837#0" expanded="true" />
-                <element signature="e#3083#3151#0" expanded="true" />
-                <element signature="e#3338#3433#0" expanded="true" />
-                <element signature="e#4294#4331#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +106,7 @@
       <file leaf-file-name="tasks.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/tasks.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="36" selection-start="58" selection-end="58" vertical-scroll-proportion="-1.25">
+            <state line="2" column="36" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,7 +115,7 @@
       <file leaf-file-name="logger.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/logger.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="35" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.5">
+            <state line="4" column="35" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,7 +133,7 @@
       <file leaf-file-name="build-config.example.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/build-config.example.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="285" selection-end="285" vertical-scroll-proportion="-5.625">
+            <state line="9" column="19" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,7 +142,7 @@
       <file leaf-file-name="triggers.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/triggers.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="9" selection-start="8" selection-end="8" vertical-scroll-proportion="-0.625">
+            <state line="1" column="9" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,7 +154,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.5555553">
+            <state line="10" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,7 +163,7 @@
       <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="510" selection-end="510" vertical-scroll-proportion="0.35885167">
+            <state line="28" column="29" selection-start="718" selection-end="718" vertical-scroll-proportion="0.86901766">
               <folding />
             </state>
           </provider>
@@ -193,7 +172,7 @@
       <file leaf-file-name="builds.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/builds.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="208" selection-end="208" vertical-scroll-proportion="-7.5">
+            <state line="12" column="6" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,6 +184,14 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -232,7 +219,7 @@
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -258,6 +245,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,19 +326,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pragma-logger" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,6 +373,23 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="63ec8e3e-e24b-4c41-8598-14fac81c4c93" name="Default" comment="" />
@@ -396,12 +400,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3988604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -486,6 +490,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/builds.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="6" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LICENCE">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="53" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
@@ -523,19 +541,7 @@
     <entry file="file://$PROJECT_DIR$/services/TaskRunner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="12" selection-start="4152" selection-end="4152" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!doc;n#TaskRunner#0" expanded="true" />
-            <element signature="e#2140#2229#0" expanded="true" />
-            <element signature="e#2268#2339#0" expanded="true" />
-            <element signature="e#2378#2459#0" expanded="true" />
-            <element signature="e#2504#2616#0" expanded="true" />
-            <element signature="e#2670#2738#0" expanded="true" />
-            <element signature="e#2782#2837#0" expanded="true" />
-            <element signature="e#3083#3151#0" expanded="true" />
-            <element signature="e#3338#3433#0" expanded="true" />
-            <element signature="e#4294#4331#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -549,54 +555,41 @@
     <entry file="file://$PROJECT_DIR$/services/BuildManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="241" column="17" selection-start="6338" selection-end="6338" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc;n#BuildManager#0" expanded="true" />
-            <element signature="e#2064#2154#0" expanded="true" />
-            <element signature="e#2195#2266#0" expanded="true" />
-            <element signature="e#2307#2384#0" expanded="true" />
-            <element signature="e#2435#2512#0" expanded="true" />
-            <element signature="e#2563#2642#0" expanded="true" />
-            <element signature="e#2695#2742#0" expanded="true" />
-            <element signature="e#3362#3562#0" expanded="true" />
-            <element signature="e#4017#4177#0" expanded="true" />
-            <element signature="e#5199#5347#0" expanded="true" />
-            <element signature="e#5828#5924#0" expanded="true" />
-            <element signature="e#6436#6569#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/build-config.example.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="285" selection-end="285" vertical-scroll-proportion="-5.625">
+        <state line="9" column="19" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/tasks.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="58" selection-end="58" vertical-scroll-proportion="-1.25">
+        <state line="2" column="36" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/logger.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="35" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.5">
+        <state line="4" column="35" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/builds.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="208" selection-end="208" vertical-scroll-proportion="-7.5">
+        <state line="12" column="6" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/triggers.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="8" selection-end="8" vertical-scroll-proportion="-0.625">
+        <state line="1" column="9" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -606,14 +599,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.5555553">
+        <state line="10" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="510" selection-end="510" vertical-scroll-proportion="0.35885167">
+        <state line="28" column="29" selection-start="718" selection-end="718" vertical-scroll-proportion="0.86901766">
           <folding />
         </state>
       </provider>
