@@ -1,0 +1,3 @@
+[submodule "data"]
+	path = data
+	url = https://DenisRechkunov@github.com/pragma-dudes/pragma-ci-data.git
