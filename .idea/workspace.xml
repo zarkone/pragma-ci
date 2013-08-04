@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63ec8e3e-e24b-4c41-8598-14fac81c4c93" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/tasks/BuildTask.js" afterPath="$PROJECT_DIR$/services/tasks/BuildTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/TaskRunner.js" afterPath="$PROJECT_DIR$/services/TaskRunner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pragma-ci.iml" afterPath="$PROJECT_DIR$/.idea/pragma-ci.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pragma-ci.iws" />
@@ -26,7 +23,7 @@
     <file path="/README.md" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375553344226" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-logger/example/main.js" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375362435141" ignored="false" />
     <file path="/main.js" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375367140987" ignored="false" />
-    <file path="/Dummy.txt" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375636161195" ignored="false" />
+    <file path="/Dummy.txt" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375636222240" ignored="false" />
     <file path="/a.dummy" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375633173281" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-config/LICENCE.md" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375288844358" ignored="false" />
     <file path="$PROJECT_DIR$/../pragma-config/package.json" changelist="63ec8e3e-e24b-4c41-8598-14fac81c4c93" time="1375361276435" ignored="false" />
@@ -102,7 +99,7 @@
       <file leaf-file-name="TaskRunner.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/TaskRunner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="16" selection-start="4679" selection-end="4679" vertical-scroll-proportion="1.1235155">
+            <state line="161" column="16" selection-start="4679" selection-end="4679" vertical-scroll-proportion="1.1288782">
               <folding />
             </state>
           </provider>
@@ -406,7 +403,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pragma-logger" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="true" />
@@ -480,7 +477,11 @@
       <created>1375554060739</created>
       <updated>1375554060739</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implement all build task methods.">
+      <created>1375636232122</created>
+      <updated>1375636232122</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -508,16 +509,16 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33048433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.66951567" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39772728" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -722,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/TaskRunner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="16" selection-start="4679" selection-end="4679" vertical-scroll-proportion="1.1235155">
+        <state line="161" column="16" selection-start="4679" selection-end="4679" vertical-scroll-proportion="1.1288782">
           <folding />
         </state>
       </provider>
