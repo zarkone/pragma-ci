@@ -1,0 +1,15 @@
+{
+	"mongoUrl": "mongodb://localhost/pragma-ci",
+
+	"mongoConfig": {
+		"db": {
+			"w": 1,
+			"journal": true,
+			"forceServerObjectId": true,
+			"numberOfRetries": 50
+		},
+		"server": {
+			"auto_reconnect": true
+		}
+	}
+}

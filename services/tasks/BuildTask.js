@@ -36,31 +36,136 @@ var EventEmitter = require('events').EventEmitter,
 
 util.inherits(BuildTask, EventEmitter);
 
+/**
+ * Create new instance of build task.
+ * @param {PragmaConfig} config Current configuration with 'tasks' section.
+ * @param {Mongoose.Document} build Build of task.
+ * @constructor
+ */
 function BuildTask(config, build) {
 	BuildTask.super_.call(this);
 	this._build = build;
 	this._logger = new PragmaLogger(config);
-	this._scheduler = new PragmaScheduler(build.timeout, 0,
+	this._killByTimeoutScheduler = new PragmaScheduler(build.timeout, 0,
 	                                      this.kill.bind(this));
 }
 
-BuildTask.prototype._scheduler = null;
+/**
+ * Scheduler which will kill this task by timeout.
+ * @type {PragmaScheduler}
+ * @private
+ */
+BuildTask.prototype._killByTimeoutScheduler = null;
 
+/**
+ * Is this task finished.
+ * @type {boolean}
+ */
 BuildTask.prototype.isFinished = false;
 
+/**
+ * Current build of task.
+ * @type {Mongoose.Document}
+ * @private
+ */
 BuildTask.prototype._build = null;
 
+/**
+ * Kill this task.
+ */
 BuildTask.prototype.kill = function () {
-	if(this.isFinished){
+	if (this.isFinished) {
 		return;
 	}
 	this.isFinished = true;
 	this.emit('stateChanged', 'killed');
 };
 
+/**
+ * Run this task.
+ */
 BuildTask.prototype.run = function () {
-	this._scheduler.start();
-	this._logger.info(util.format('Running task for project "%s" build #%d',
+	this._killByTimeoutScheduler.start();
+	this._logger.info(util.format('Project "%s" build #%d: running build task...',
 	                              this._build.name,
 	                              this._build.number));
+	this._cloneRepository();
+	this._runTests();
+	this._runPreDeploymentScript();
+	this._runPostDeploymentScript();
+	this._deploy();
+};
+
+/**
+ * Clone git repository specified in build.
+ * @private
+ */
+BuildTask.prototype._cloneRepository = function () {
+	if(this.isFinished){
+		return;
+	}
+	this._logger.info(util.format('Project "%s" build #%d: git clone from %s branch %s',
+	                              this._build.name,
+	                              this._build.number,
+	                              this._build.git,
+	                              this._build.branch || 'master'
+	));
+
+};
+
+/**
+ * Run tests specified in build.
+ * @private
+ */
+BuildTask.prototype._runTests = function () {
+	if(this.isFinished){
+		return;
+	}
+	this._logger.info(util.format('Project "%s" build #%d: run tests',
+	                              this._build.name,
+	                              this._build.number));
+};
+
+/**
+ * Run pre-deployment script specified in build.
+ * @private
+ */
+BuildTask.prototype._runPreDeploymentScript = function () {
+	if (!this._build.preDeploymentScript || this.isFinished) {
+		return;
+	}
+
+	this._logger.info(util.format('Project "%s" build #%d: run pre-deployment script',
+	                              this._build.name,
+	                              this._build.number));
+};
+
+/**
+ * Run post-deployment script specified in build.
+ * @private
+ */
+BuildTask.prototype._runPostDeploymentScript = function () {
+	if (!this._build.postDeploymentScript || this.isFinished) {
+		return;
+	}
+
+	this._logger.info(util.format('Project "%s" build #%d: run post-deployment script',
+	                              this._build.name,
+	                              this._build.number));
+};
+
+/**
+ * Deploy build to specified location.
+ * @private
+ */
+BuildTask.prototype._deploy = function () {
+	if (!this._build.deploymentPath || this.isFinished) {
+		return;
+	}
+
+	this._logger.info(util.format('Project "%s" build #%d: deploy "%s" to "%s"',
+	                              this._build.name,
+	                              this._build.number,
+	                              this._build.deploymentRoot || '.',
+	                              this._build.deploymentPath));
 };

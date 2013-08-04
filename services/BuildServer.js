@@ -31,21 +31,49 @@
 module.exports = BuildServer;
 
 var TaskRunner = require('./TaskRunner.js'),
-	BuildManager = require('./BuildManager.js'),
+	DataContext = require('../data/DataContext.js'),
+	BuildManager = require('./../data/managers/BuildManager.js'),
 	TriggerListener = require('./TriggerListener.js');
 
+/**
+ * Create new instance of build server.
+ * @param {PragmaConfig} config Current configuration.
+ * @constructor
+ */
 function BuildServer(config){
+	this._dataContext = new DataContext(config);
 	this._triggerListener = new TriggerListener(config);
-	this._taskRunner = new TaskRunner(config, new BuildManager(config));
+	this._taskRunner = new TaskRunner(config);
 
 	this._triggerListener.on('trigger', function(key){
 		this._taskRunner.handleTrigger(key);
 	}.bind(this));
 }
 
+/**
+ * Current data context instance.
+ * @type {DataContext}
+ * @private
+ */
+BuildServer.prototype._dataContext = null;
+
+/**
+ * Current task runner instance.
+ * @type {TaskRunner}
+ * @private
+ */
 BuildServer.prototype._taskRunner = null;
+
+/**
+ * Current trigger listener instance.
+ * @type {TriggerListener}
+ * @private
+ */
 BuildServer.prototype._triggerListener = null;
 
+/**
+ * Start build server.
+ */
 BuildServer.prototype.start = function () {
 	this._taskRunner.start();
 	this._triggerListener.start();

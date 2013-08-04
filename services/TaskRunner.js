@@ -32,6 +32,7 @@ module.exports = TaskRunner;
 
 var EventEmitter = require('events').EventEmitter,
 	BuildTask = require('./tasks/BuildTask.js'),
+	DataContext = require('../data/DataContext.js'),
 	PragmaLogger = require('pragma-logger'),
 	PragmaScheduler = require('pragma-scheduler'),
 	util = require('util');
@@ -41,14 +42,13 @@ util.inherits(TaskRunner, EventEmitter);
 /**
  * Create new instance of task runner service.
  * @param {PragmaConfig} config Configuration object with 'tasks' section.
- * @param {BuildManager} buildManager Build manager.
  * @constructor
  */
-function TaskRunner(config, buildManager) {
+function TaskRunner(config) {
 	TaskRunner.super_.call(this);
 	this._config = config;
 	this._logger = new PragmaLogger(config);
-	this._buildManager = buildManager;
+	this._dataContext = new DataContext(config);
 	this._pendingCheckScheduler = new PragmaScheduler(0, config.tasks.checkInterval,
 	                                                  this._checkPendingBuild.bind(this));
 }
@@ -68,11 +68,11 @@ TaskRunner.prototype._config = null;
 TaskRunner.prototype._logger = null;
 
 /**
- * Current instance of build manager.
- * @type {BuildManager}
+ * Current data context instance.
+ * @type {DataContext}
  * @private
  */
-TaskRunner.prototype._buildManager = null;
+TaskRunner.prototype._dataContext = null;
 
 /**
  * Current instance of scheduler which checks for pending builds.
@@ -98,30 +98,35 @@ TaskRunner.prototype._checkPendingBuild = function () {
 		return;
 	}
 
-	this._buildManager.getPendingBuild(function (error, build) {
-		if (error || !build) {
-			return;
-		}
-		this._startTask(build);
-	}.bind(this));
+	this._dataContext.buildManager.getPendingBuild()
+		.then(this._startTask.bind(this))
+		.fail(this._logger.error.bind(this._logger))
+		.done();
 };
 
 /**
  * Handle build trigger.
- * @param {String} key Trigger key.
+ * @param {string} key Trigger key.
  */
 TaskRunner.prototype.handleTrigger = function (key) {
 	this._logger.info(util.format('Trying create build by trigger "%s"', key));
 
-	this._buildManager.createBuildByTriggerKey(key);
+	this._dataContext.buildManager
+		.createBuildByTriggerKey(key)
+		.fail(this._logger.error.bind(this._logger))
+		.done();
 };
 
 /**
  * Start next task.
- * @param {Object} build Build object in pending state.
+ * @param {object} build Build object in pending state.
  * @private
  */
 TaskRunner.prototype._startTask = function (build) {
+	if(!build){
+		return;
+	}
+
 	this._logger.info(util.format('Starting build for project "%s"', build.name));
 
 	this._pendingCheckScheduler.stop();
@@ -131,23 +136,29 @@ TaskRunner.prototype._startTask = function (build) {
 	this._currentTask.run();
 };
 
+/**
+ * Handle state change event of task.
+ * @param {Mongoose.Document} build Build instance.
+ * @param {BuildTask} task Task which state was changed.
+ * @param {string} state New task state.
+ * @private
+ */
 TaskRunner.prototype._stateChangedHandler = function (build, task, state) {
 
 	this._logger.info(util.format('Build #%d of project "%s" changed state to %s',
 	                              build.number, build.name, state));
 
-	this._buildManager.setBuildState(build._id, state, function (error, newBuild) {
-		if(error){
-			task.kill();
-			return;
-		}
-
-		if (task.isFinished) {
-			task.removeAllListeners();
-			this._currentTask = null;
-			this._pendingCheckScheduler.start();
-		}
-	}.bind(this));
+	this._dataContext.buildManager.setBuildState(build._id, state)
+		.then(function () {
+			      if (task.isFinished) {
+				      task.removeAllListeners();
+				      this._currentTask = null;
+				      this._pendingCheckScheduler.start();
+			      }
+		}.bind(this))
+		.fail(this._logger.error.bind(this._logger))
+		.fail(task.kill.bind(this))
+		.done();
 };
 
 /**

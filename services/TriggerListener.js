@@ -39,7 +39,7 @@ util.inherits(TriggerListener, EventEmitter);
 
 /**
  * Create new instance of trigger listener service.
- * @param {Object} config Configuration object with 'triggers' section.
+ * @param {object} config Configuration object with 'triggers' section.
  * @constructor
  */
 function TriggerListener(config) {
@@ -52,7 +52,7 @@ function TriggerListener(config) {
 
 /**
  * Current config object with 'triggers' section.
- * @type {Object}
+ * @type {object}
  * @private
  */
 TriggerListener.prototype._config = null;
