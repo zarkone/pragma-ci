@@ -35,6 +35,7 @@ var EventEmitter = require('events').EventEmitter,
 	DataContext = require('../data/DataContext.js'),
 	PragmaLogger = require('pragma-logger'),
 	PragmaScheduler = require('pragma-scheduler'),
+	Q = require('q'),
 	util = require('util');
 
 util.inherits(TaskRunner, EventEmitter);
@@ -123,11 +124,11 @@ TaskRunner.prototype.handleTrigger = function (key) {
  * @private
  */
 TaskRunner.prototype._startTask = function (build) {
-	if(!build){
+	if (!build) {
 		return;
 	}
 
-	this._logger.info(util.format('Starting build for project "%s"', build.name));
+	this._logger.info(util.format('Project "%s" build #%d: starting', build.name, build.number));
 
 	this._pendingCheckScheduler.stop();
 
@@ -145,19 +146,19 @@ TaskRunner.prototype._startTask = function (build) {
  */
 TaskRunner.prototype._stateChangedHandler = function (build, task, state) {
 
-	this._logger.info(util.format('Build #%d of project "%s" changed state to %s',
-	                              build.number, build.name, state));
+	this._logger.info(util.format('Project "%s" build #%d: changed state to %s',
+	                              build.name, build.number, state));
 
 	this._dataContext.buildManager.setBuildState(build._id, state)
 		.then(function () {
-			      if (task.isFinished) {
-				      task.removeAllListeners();
-				      this._currentTask = null;
-				      this._pendingCheckScheduler.start();
-			      }
+			if (task.isFinished) {
+				task.removeAllListeners();
+				this._currentTask = null;
+				this._pendingCheckScheduler.start();
+			}
 		}.bind(this))
 		.fail(this._logger.error.bind(this._logger))
-		.fail(task.kill.bind(this))
+		.fail(task.stop.bind(task), 'error')
 		.done();
 };
 

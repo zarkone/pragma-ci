@@ -27,6 +27,7 @@
 	"dependencies": {
 		"mongoose": ">=3.6.15",
 		"q": ">=0.9.6",
+		"fs-extra":">=0.6.3",
 		"pragma-logger": "*",
 		"pragma-scheduler": "*",
 		"pragma-singleton": "*",
